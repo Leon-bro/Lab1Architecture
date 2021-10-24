@@ -17,5 +17,9 @@ namespace Lab1Architecture
         {
             return base.ToString();
         }
+        public int GetValueShefs(DateTime dateTime1, DateTime dateTime2)
+        {
+            return historyOfShefChanging.GetLengthOfStoryByDate(dateTime1, dateTime2);
+        }
     }
 }

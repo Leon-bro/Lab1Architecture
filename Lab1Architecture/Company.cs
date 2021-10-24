@@ -23,5 +23,10 @@ namespace Lab1Architecture
         {
             return "\t\tCompany:\n"+base.ToString()+ "\tSubdivisions: \n" + String.Join("\n", subdivisions);
         }
+        public string GetSubdivisionWithMaxNumberShefs(DateTime dateTime1, DateTime dateTime2)
+        {
+            int max = subdivisions.Max(o => o.GetValueShefs(dateTime1, dateTime2));
+            return subdivisions.First(e => e.GetValueShefs(dateTime1, dateTime2) == max).NameOfUnit.ToString();
+        }
     }
 }

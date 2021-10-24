@@ -24,7 +24,7 @@ namespace Lab1Architecture
         }
         public override string ToString()
         {
-            return $" {Country}, {City}, {Region}, {HomeNumber}-{RoomNumber}; " + base.ToString();
+            return $" {Country}, {City}, {Region}, {HomeNumber}-{RoomNumber}; " + base.ToString()+ "\n";
         }
 
 

@@ -33,9 +33,9 @@ namespace Lab1Architecture
                     where t.DateOfFix> dateTimeStart && t.DateOfFix<= dateTimeFinish
                     select t).ToList();
         }
-        public int GetAmountOfChanging()
+        public int GetLengthOfStoryByDate(DateTime dateTime1, DateTime dateTime2)
         {
-            return history.Count;
+            return history.Count(o=>o.DateOfFix.Date>= dateTime1.Date && o.DateOfFix.Date >= dateTime2.Date);
         }
         public override string ToString()
         {

@@ -19,7 +19,7 @@ namespace Lab1Architecture
         }
         public override string ToString()
         {
-            return $"Phone number: {number}" + base.ToString();
+            return $"{number} " + base.ToString();
         }
     }
 }

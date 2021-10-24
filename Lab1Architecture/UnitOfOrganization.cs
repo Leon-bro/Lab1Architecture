@@ -12,7 +12,8 @@ namespace Lab1Architecture
     class UnitOfOrganization
         
     {
-        protected string nameOfUnit;
+
+        public string NameOfUnit { get; set; }
         protected KindOfActivity kindOfActivity;
         protected Location location;
         protected List<PhoneNumber> phoneNumbers = new List<PhoneNumber>();
@@ -49,7 +50,7 @@ namespace Lab1Architecture
         event SaveToHistoryShefDelegate ShefSave;
         public UnitOfOrganization(string nameOfOrgan, KindOfActivity kindOfActivity, Location location, Shef shef)
         {
-            nameOfUnit = nameOfOrgan;
+            NameOfUnit = nameOfOrgan;
             this.kindOfActivity = kindOfActivity;
             this.location = location;
             this.shef = shef;
@@ -59,6 +60,10 @@ namespace Lab1Architecture
             historyOfLocationChanging = new HistoryOfChanging<Location>();
             historyOfPhoneNumberChanging = new HistoryOfChanging<PhoneNumber>();
             historyOfShefChanging = new HistoryOfChanging<Shef>();
+        }
+        public void AddPhoneNumber(PhoneNumber phoneNumber)
+        {
+            phoneNumbers.Add(phoneNumber);
         }
         /// <summary>
         /// The method are to automatically save the history of changes of location.
@@ -96,10 +101,10 @@ namespace Lab1Architecture
         {
             historyOfChanging.AddRecordToStoryList(objectToSave);
         }
-        public override string ToString() => $"Name of unit of organisation: {nameOfUnit} \n" +
+        public override string ToString() => $"Name of unit of organisation: {NameOfUnit} \n" +
                 $"Kind of activity: {kindOfActivity}\n" +
                 $"Location: {location}" +
-                $"Phone numbers: {String.Join(";\n", phoneNumbers)}\n" +
+                $"Phone numbers:\n {String.Join(";\n", phoneNumbers)}\n" +
                 $"Shef:\n {shef}" +
                 $"Email: {email}\n";
         public void outputHistory()
@@ -107,6 +112,11 @@ namespace Lab1Architecture
             Console.WriteLine("Locations: " + historyOfLocationChanging);
             Console.WriteLine("Phone numbers: " + historyOfPhoneNumberChanging);
             Console.WriteLine("Shefs: "+historyOfShefChanging);
+        }
+
+        public List<PhoneNumber> GetHistoryByDate(DateTime dateTime)
+        {
+            return historyOfPhoneNumberChanging.GetHistoryByDate(dateTime);
         }
     }
     

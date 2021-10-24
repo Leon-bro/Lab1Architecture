@@ -20,7 +20,7 @@ namespace Lab1Architecture
         }
         public override string ToString()
         {
-            return "Date of commit: "+ DateOfFix.Date + "\n";
+            return "Date of commit: "+ DateOfFix.Date;
         }
     }
 }

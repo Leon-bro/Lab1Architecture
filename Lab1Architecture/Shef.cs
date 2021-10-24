@@ -26,7 +26,7 @@ namespace Lab1Architecture
         
         public override string ToString()
         {
-            return $"First name: {FirstName}\n Last name: {LastName}\n Patronymic: {Patronymic}\n Position: {PositionOfShef}\n" + base.ToString();
+            return $"First name: {FirstName}\n Last name: {LastName}\n Patronymic: {Patronymic}\n Position: {PositionOfShef}\n" + base.ToString() +"\n";
         }
     }
 }
