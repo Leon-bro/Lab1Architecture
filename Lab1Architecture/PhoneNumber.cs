@@ -12,5 +12,14 @@ namespace Lab1Architecture
     class PhoneNumber : DateOfCommit
     {
         string number;
+        public PhoneNumber(string number, DateTime dateTime)
+        {
+            this.number = number;
+            SetDateOfFixing(dateTime);
+        }
+        public override string ToString()
+        {
+            return $"Phone number: {number}" + base.ToString();
+        }
     }
 }

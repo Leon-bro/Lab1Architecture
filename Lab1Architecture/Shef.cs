@@ -15,12 +15,18 @@ namespace Lab1Architecture
         public string LastName { get; set; }
         public string Patronymic { get; set; }
         public PositionOfShef PositionOfShef { get; set; }
-        public Shef(string firstName, string lastName, string patronymic, PositionOfShef positionOfShef)
+        public Shef(string firstName, string lastName, string patronymic, PositionOfShef positionOfShef, DateTime dateOfCommit)
         {
             FirstName = firstName;
             LastName = lastName;
             Patronymic = patronymic;
             PositionOfShef = positionOfShef;
+            SetDateOfFixing(dateOfCommit);
+        }
+        
+        public override string ToString()
+        {
+            return $"First name: {FirstName}\n Last name: {LastName}\n Patronymic: {Patronymic}\n Position: {PositionOfShef}\n" + base.ToString();
         }
     }
 }

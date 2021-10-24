@@ -8,5 +8,14 @@ namespace Lab1Architecture
 {
     class Subdivision : UnitOfOrganization
     {
+        public Subdivision(string nameOfOrgan, KindOfActivity kindOfActivity, Location location, Shef shef)
+            : base(nameOfOrgan, kindOfActivity, location, shef)
+        {
+
+        }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

@@ -18,5 +18,9 @@ namespace Lab1Architecture
         {
             this.dateOfFix = dateOfFix;
         }
+        public override string ToString()
+        {
+            return "Date of commit: "+ DateOfFix.Date + "\n";
+        }
     }
 }
