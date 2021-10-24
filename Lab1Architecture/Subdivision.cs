@@ -21,5 +21,11 @@ namespace Lab1Architecture
         {
             return historyOfShefChanging.GetLengthOfStoryByDate(dateTime1, dateTime2);
         }
+        public string GetWithPhoneNumbers(DateTime dateTime)
+        {
+            
+            return $"Name of subdivision: {NameOfUnit};\n" +
+                $"Phone numbers: \n{String.Join("\n", historyOfPhoneNumberChanging.GetHistoryByDate(dateTime))}";
+        }
     }
 }

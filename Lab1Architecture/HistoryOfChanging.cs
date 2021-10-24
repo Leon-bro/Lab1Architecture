@@ -35,7 +35,7 @@ namespace Lab1Architecture
         }
         public int GetLengthOfStoryByDate(DateTime dateTime1, DateTime dateTime2)
         {
-            return history.Count(o=>o.DateOfFix.Date>= dateTime1.Date && o.DateOfFix.Date >= dateTime2.Date);
+            return history.Count(o=>o.DateOfFix.Date>= dateTime1.Date && o.DateOfFix.Date <= dateTime2.Date);
         }
         public override string ToString()
         {

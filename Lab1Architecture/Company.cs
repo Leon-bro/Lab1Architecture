@@ -28,5 +28,10 @@ namespace Lab1Architecture
             int max = subdivisions.Max(o => o.GetValueShefs(dateTime1, dateTime2));
             return subdivisions.First(e => e.GetValueShefs(dateTime1, dateTime2) == max).NameOfUnit.ToString();
         }
+        public string GetPhoneNumbersOfSubDivisions(DateTime dateTime1)
+        {
+            var str = subdivisions.Select(o => o.GetWithPhoneNumbers(dateTime1)).ToList();
+            return String.Join("\n", subdivisions.Select(o => o.GetWithPhoneNumbers(dateTime1)).ToList());
+        }
     }
 }
