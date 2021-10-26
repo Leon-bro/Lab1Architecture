@@ -30,8 +30,12 @@ namespace Lab1Architecture
             subdivision2.ChangeShef(new Shef("General", "Nost", "Bob", PositionOfShef.FinancialDirector, new DateTime(2008, 11, 12)));
             subdivision2.AddPhoneNumber(new PhoneNumber("323-545-43-12", new DateTime(2007, 12, 6)));
             subdivision2.ChangePhoneNumber(0, new PhoneNumber("311-275-43-12", new DateTime(2007, 12, 5)));
-            //Console.WriteLine("\n\n"+company.GetSubdivisionWithMaxNumberShefs(new DateTime(2007, 11, 12), new DateTime(2011, 11, 12)));
-            Console.WriteLine(company.GetPhoneNumbersOfSubDivisions(new DateTime(2007, 12, 5)));
+             
+            Console.WriteLine(company);
+            subdivision1.outputHistory();
+            Console.WriteLine("\n\nSubdivision with max number of shef between dates: "+company.GetSubdivisionWithMaxNumberShefs(new DateTime(2007, 11, 12), new DateTime(2011, 11, 12)));
+            Console.WriteLine("Phone number of subdivisions: "+company.GetPhoneNumbersOfSubDivisions(new DateTime(2007, 12, 5)));
+            Console.WriteLine("Subdivisions without location: "+ company.GetSubdivisionsWithOutLocationAtADate(new DateTime(2010, 12, 5)));
 
         }
     }

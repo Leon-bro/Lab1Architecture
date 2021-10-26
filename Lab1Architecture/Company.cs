@@ -33,5 +33,9 @@ namespace Lab1Architecture
             var str = subdivisions.Select(o => o.GetWithPhoneNumbers(dateTime1)).ToList();
             return String.Join("\n", subdivisions.Select(o => o.GetWithPhoneNumbers(dateTime1)).ToList());
         }
+        public string GetSubdivisionsWithOutLocationAtADate(DateTime dateTime1)
+        {
+            return String.Join(",", subdivisions.Where(o => o.Location.DateOfFix.Date > dateTime1.Date).Select(o=>o.NameOfUnit));
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace Lab1Architecture
     {
 
         public string NameOfUnit { get; set; }
+        public Location Location { get=> location; }
         protected KindOfActivity kindOfActivity;
         protected Location location;
         protected List<PhoneNumber> phoneNumbers = new List<PhoneNumber>();
