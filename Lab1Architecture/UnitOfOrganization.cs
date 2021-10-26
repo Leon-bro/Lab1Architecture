@@ -108,8 +108,12 @@ namespace Lab1Architecture
                 $"Phone numbers:\n {String.Join(";\n", phoneNumbers)}\n" +
                 $"Shef:\n {shef}" +
                 $"Email: {email}\n";
+        /// <summary>
+        /// To show history of element
+        /// </summary>
         public void outputHistory()
         {
+            Console.WriteLine("Name:"+ NameOfUnit);
             Console.WriteLine("Locations: " + historyOfLocationChanging);
             Console.WriteLine("Phone numbers: " + historyOfPhoneNumberChanging);
             Console.WriteLine("Shefs: "+historyOfShefChanging);

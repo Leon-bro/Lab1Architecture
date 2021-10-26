@@ -33,7 +33,8 @@ namespace Lab1Architecture
              
             Console.WriteLine(company);
             subdivision1.outputHistory();
-            Console.WriteLine("\n\nSubdivision with max number of shef between dates: "+company.GetSubdivisionWithMaxNumberShefs(new DateTime(2007, 11, 12), new DateTime(2011, 11, 12)));
+            subdivision2.outputHistory();
+            Console.WriteLine("\n\nSubdivision with max number of shef between dates: "+company.GetSubdivisionWithMaxNumberShefs(new DateTime(2010, 11, 12), new DateTime(2015, 11, 12)));
             Console.WriteLine("Phone number of subdivisions: "+company.GetPhoneNumbersOfSubDivisions(new DateTime(2007, 12, 5)));
             Console.WriteLine("Subdivisions without location: "+ company.GetSubdivisionsWithOutLocationAtADate(new DateTime(2010, 12, 5)));
 
