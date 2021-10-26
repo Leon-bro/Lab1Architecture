@@ -47,7 +47,6 @@
     <Compile Include="DateOfCommit.cs" />
     <Compile Include="HistoryOfChanging.cs" />
     <Compile Include="KindOfActivity.cs" />
-    <Compile Include="ListCompanies.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="PositionOfShef.cs" />
     <Compile Include="Program.cs" />

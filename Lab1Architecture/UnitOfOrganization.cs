@@ -118,7 +118,11 @@ namespace Lab1Architecture
             Console.WriteLine("Phone numbers: " + historyOfPhoneNumberChanging);
             Console.WriteLine("Shefs: "+historyOfShefChanging);
         }
-
+        /// <summary>
+        /// Get history of element at given Date
+        /// </summary>
+        /// <param name="dateTime">Given date</param>
+        /// <returns></returns>
         public List<PhoneNumber> GetHistoryByDate(DateTime dateTime)
         {
             return historyOfPhoneNumberChanging.GetHistoryByDate(dateTime);
